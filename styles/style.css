@@ -1,0 +1,197 @@
+
+.parent{
+	padding:5px;
+	display: grid;
+	grid-template-columns: 1fr 3fr 1fr;
+	gap: 20px;
+}
+
+.item{
+	padding: 20px;
+	font-size: 0.77rem;
+	line-height: 1.7;
+}
+
+.item3{
+	background-color: darkgray;
+	color: white;
+	font-size: 1.1em;
+	grid-row: span 3;
+}
+
+.item p{
+	margin: 0;
+}
+
+.item01 { grid-area: header; }
+.item02 { grid-area: menu; }
+.item03 { grid-area: main; }
+.item04 { grid-area: right; }
+.item05 { grid-area: footer; }
+
+.grid-container {
+  display: grid;
+  grid-template-areas: /*This is creating areas with 6 columns and 3 rows */
+    'header  header  header  header  header  header'  /*Name the cells you want to be a container. Here header has 6 columns and 1 row*/
+    'menu    main    main    main    right   right'   /*In here, menu has 1 column and 2 rows. Mains has 3 columns and right has 2.*/
+    'menu    footer footer  footer   footer  footer'; /* footer has 5 columns*/
+  gap: 5px;
+  background-color: #2196F3;
+  padding: 5px;
+}
+
+.grid-container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+}
+
+
+.grid-containers {
+  display: inline-grid;
+  grid-template-columns: auto auto auto;
+  background-color: #2196F3;
+  padding: 5px;
+}
+
+.grid-items {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 0.2px solid rgba(0, 0, 0, 0.8);
+  padding: 5px;
+  font-size: 30px;
+  text-align: center;
+}
+
+.grid-containeres {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  background-color: #2196F3;
+  padding: 5px;
+}
+
+.grid-itens {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 0.5px solid rgba(0, 0, 0, 0.8);
+  padding: 5px;
+  font-size: 30px;
+  text-align: center;
+}
+
+.form label {
+  display: grid;
+  grid-template-columns: 12vw 1fr;
+}
+legend{
+	font-size: 1.1em;
+}
+
+.example-banner {
+	max-width: 50vw; 
+	height: 200px;
+	background-color: rgb(222, 222, 255);
+	margin: 20px auto 20px auto;
+	display: grid;
+}
+
+.center-me{
+	margin: auto;
+	color: rgb(113, 113, 175);
+	font-size: 3rem;
+}
+
+.full-width-example{
+	display: grid;
+	/* grid-template-columns: 800px; --> This not responsive */
+	grid-template-columns: minmax(auto, 800px); /* this is responsive */
+	justify-content: center;
+	background-color: rgb(255, 200,  150);
+	color: saddlebrown;
+	line-height: 1.7;
+	padding: 20px;
+}
+
+.photo-example{
+	display: grid;
+	width: 700px;
+	margin: 20px auto;
+}
+
+.photo-example img{
+ 	grid-column: 1;
+ 	grid-row: 1;
+ 	width: 40vw;
+ 	height: 120vh;
+ 	display: block;
+}
+
+.overlay-text{
+	align-self: end ;
+	grid-column: 1;
+	grid-row: 1;
+	color: #fff;
+	background-color: rgba(0, 0, 0, 0.7); 
+	padding: 20px;
+	font-size: 0.85rem;
+	line-height: 1.7;
+}
+
+@media screen and (min-width: 850px){ /* this @media query will adjust the item when screen is shorter than 850px*/
+		.layout{
+			display: grid;
+			grid-template-columns: 1fr 2.5fr;
+
+			/* below we`ll see a different way of placing items in the grid */
+			grid-template-areas:
+				"header header"   /* This indicates that header div will be placed in the first row and two columns */
+				"sidebar main"    /* This indicates that sidebar div uses the 1st column/2nd row and main uses 2ns column/2nd row */
+				"sidebar footer"; /* This indicates that sidebar div uses also the 3rd row and footer will use the 3rd row and 3rd column */
+		}
+}
+
+.header{
+	background-color: rgb(113, 113, 175);
+	color: #fff;
+	grid-area: header; /* This has to be the name used in the "grid-template-areas". It`s not necessary to be the div name*/
+}
+
+.sidebar{
+	grid-area: sidebar;
+	background-color: #ddd;
+	font-size: 0.8rem;
+	color: #999;
+	padding: 20px;
+}
+
+.main{
+	grid-area: main;
+	padding: 20px;
+	line-height: 1.7;
+}
+
+.footer{
+	grid-area: footer;
+	background-color: rgb(77, 77, 77);
+	color: #fff;
+	padding: 15px;
+	align-self: end;
+}
+
+.responsive-example{
+	max-width: 100%;
+	margin: 20px auto;
+	display: grid;
+	/*grid-template-columns: repeat(4, 1fr); --> repeat 4 times width 1 fraction */
+	grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /*browser will select how many columns will fit for 180px items*/
+	gap: 20px;
+}
+
+.responsive-item {
+	background-color: rgb(204, 247, 230);
+	padding: 20px;
+	color: rgb(90, 145, 123);
+	font-size: 0.77rem;
+	line-height: 1.7;
+	overflow: auto;
+
+}
