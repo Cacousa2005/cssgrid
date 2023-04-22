@@ -12,7 +12,7 @@ body{
 	background-color: #6b692284;
 }
 
-.item3{
+.item:nth-child(3){
 	background-color:#1d24117c;
 }
 

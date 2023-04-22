@@ -1,4 +1,9 @@
 
+#top{
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+}
 .parent{
 	padding:5px;
 	display: grid;
@@ -13,8 +18,7 @@
 	line-height: 1.7;
 }
 
-.item3{
-	background-color: darkgray;
+.item:nth-child(3){
 	grid-row: span 3;
 }
 
