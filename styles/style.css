@@ -4,6 +4,7 @@
 	display: grid;
 	grid-template-columns: 1fr 3fr 1fr;
 	gap: 20px;
+
 }
 
 .item{
@@ -14,8 +15,6 @@
 
 .item3{
 	background-color: darkgray;
-	color: white;
-	font-size: 1.1em;
 	grid-row: span 3;
 }
 
@@ -31,17 +30,16 @@
 
 .grid-container {
   display: grid;
-  grid-template-areas: /*This is creating areas with 6 columns and 3 rows */
+  grid-template-areas:                                /*This is creating areas with 6 columns and 3 rows */
     'header  header  header  header  header  header'  /*Name the cells you want to be a container. Here header has 6 columns and 1 row*/
     'menu    main    main    main    right   right'   /*In here, menu has 1 column and 2 rows. Mains has 3 columns and right has 2.*/
-    'menu    footer footer  footer   footer  footer'; /* footer has 5 columns*/
+    'menu    footer  footer  footer  footer  footer'; /* footer has 5 columns*/
   gap: 5px;
-  background-color: #2196F3;
   padding: 5px;
 }
 
 .grid-container > div {
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255);
   text-align: center;
   padding: 20px 0;
   font-size: 30px;
@@ -121,7 +119,7 @@ legend{
  	grid-column: 1;
  	grid-row: 1;
  	width: 40vw;
- 	height: 120vh;
+ 	height: 80vh;
  	display: block;
 }
 
@@ -130,10 +128,10 @@ legend{
 	grid-column: 1;
 	grid-row: 1;
 	color: #fff;
-	background-color: rgba(0, 0, 0, 0.7); 
+	background-color: rgba(0, 0, 0, 0.3); 
 	padding: 20px;
 	font-size: 0.85rem;
-	line-height: 1.7;
+	line-height: 1.2;
 }
 
 @media screen and (min-width: 850px){ /* this @media query will adjust the item when screen is shorter than 850px*/
@@ -157,7 +155,6 @@ legend{
 
 .sidebar{
 	grid-area: sidebar;
-	background-color: #ddd;
 	font-size: 0.8rem;
 	color: #999;
 	padding: 20px;
@@ -171,7 +168,6 @@ legend{
 
 .footer{
 	grid-area: footer;
-	background-color: rgb(77, 77, 77);
 	color: #fff;
 	padding: 15px;
 	align-self: end;

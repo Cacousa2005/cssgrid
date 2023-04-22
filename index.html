@@ -8,19 +8,19 @@
 </head>
 <body>
 	<h1 id="title">Css Grid</h1>
-		<h3>Everything you wanted to know about grid</h3>
+		<h3>Everything you wanted to know about grid. <br/>This all about grid. Nothing more.</h3>
 
 		<h4>Css Grid - setting collumns only.</h4>
 
 		<div class="parent">
 			<div class="item item1">
-				<p><h2> 1 </h2> When you set a css grid defining columns and not rows, the browser will spread the elements according to your settings. All elements inside the block will go in one by one to the end of the grid. If you have set 4 columns to your grid but have 8 elements, the browser will place the first 4 in the fisrt row and the other four in the second row automatically.<br>Like in this grid, we have set 3 columns but we have 6 elements in the block. "display: grid="1fr 3fr 1fr" The rows were filled as the elements are placed in the block. Read section 2 to find out about the gap and why we have 3 rows and now two.</p>
+				<p><h2> 1 </h2> When you set a css grid, and define columns only, not rows, the browser will spread the elements according to your settings. All elements inside the block will be arranged one by one to the end of the grid. If you have set 4 columns to your grid but have 8 elements, the browser will place the first 4 in the fisrt row and the other four in the second row automatically.<br>Like in this grid, we have set 3 columns but we have 6 elements in the block. "display: grid="1fr 3fr 1fr" The rows are filled as the elements are placed in the block. Read section 2 to find out about the gap and why we have 3 rows and not two, and why there is a blank space at the bottom of the grid.</p>
 			</div>
 			<div class="item item2">
-				<p><h2> 2 </h2> OK. <br>Now, look the way we set the grid: 1fr 3fr 1fr. What does this mean? It simply means that the second columns is 3 times the size of the others. Thats why, you see the second column larger than the others. Have you noticed?<br> The other thing that is important to know about this grid, is that i have set the third column to be expanded up to 3 rows if necessary. This is how you do it: First I had to name the element I wanted to expand. In this case the third one. On you stylesheet you write #'Id_name' { grid-row: span 3; }<br> I wanted the third column to expand 3 rows, so I set it to 3. Thats why you see the darker column expanding 3 rows.<br>The problem with the grid is that all the rows will have the same height, and they will be set automatically to the larger one. In this example, the first column is larger, so the second column is not completely filling the whole space reserved for it.</p>
+				<p><h2> 2 </h2> OK. <br>Now, look the way we set the grid: 1fr 3fr 1fr. What does this mean? It simply means that the second column is 3 times the size of the others. Thats why, you see the second column larger than the others. Have you noticed?<br> The other thing that is important to know about this grid, is that I have set the third column to be expanded up to 3 rows if necessary. <br/>This is how you do it: First you have to name the element you want to expand. In this case the third one. On your stylesheet you write #'Id_name' { grid-row: span 3; }<br> I wanted the third column to expand 3 rows, so I set it to 3. Thats why you see the darker column expanding 3 rows.<br>The problem with the grid is that all the rows will have the same height, and they will be set automatically to the larger one. In this example, the first column is larger, so the second column is not completely filling the whole space reserved for it.</p>
 			</div>
 			<div class="item item3">
-				<p><h2> 3 </h2>THIS IS THE THIRD COLUMN.<br> 
+				<p><h2> 3 </h2>THIS IS THE THIRD COLUMN.<br/><br> 
 				This is the row I've chosen to expand 3 rows. Doesn't matter what content I have inside. The browser will set it to three. As stated in the second paragraph, 'span' is the keyword responsible for expanding the column. In my example I gave span the value of 3. See the sintax above.<br>Don't worry about the format, I have changed the colors so that it can stand out among the others.</p>
 			</div>
 			<div class="item item4">
@@ -36,13 +36,13 @@
 		<h2>Using Grid-Template-Areas format</h2>
 		<p>Grid-Template-Areas is used to create grids with different sizes of spaces. The way you do that is giving names to the cells</p>
 					<div class="grid-container">
-						  <div class="item01">Header</div>
-						  <div class="item02">Menu</div>
-						  <div class="item03">Main</div>  
-						  <div class="item04">Right</div>
-						  <div class="item05">Footer</div>
+						  <div class="areas item01">Header</div>
+						  <div class="areas item02">Menu</div>
+						  <div class="areas item03">Main</div>  
+						  <div class="areas item04">Right</div>
+						  <div class="areas item05">Footer</div>
 					</div>
-					<p><b>'header  header  header  header  header  header'  </b>-->Name the cells you want to be a container. Here header has 6 columns and 1 row*/<br>
+					<p><b>'header  header  header  header  header  header'  </b>-->Name the cells you want to be a container. Here header has 6 columns and 1 row and set the items in the css file*/<br>
     				<b>'menu    main    main    main    right   right'   </b>--> In here, menu has <b>1 column and 2 rows</b>. Main has 3 columns and right has 2. <br>
     				<b>'menu    footer footer  footer   footer  footer'  </b>--> footer has 5 columns <br></p>
 
@@ -124,15 +124,15 @@
 
 		<div class="photo-example">
 			<img src="eu.png" alt="A criminally cute dog. lol" />
-			<div class="overlay-text">
-				<p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Exercitationem eos ad valorem. Lorem ipsum dolor sit amet consectetur adipiscing elit</p>
-			</div>
+				<div class="overlay-text">
+					<p>This text is placed on top of the image on purpose, so that you can see how far you can go with CSS</p>
+				</div>
 		</div>
 
 		<div class="layout">
-			<div class="header">This is the header</div>
+			<div class="header">This is another example of grid made with grid-area</div>
 			<div class="main">
-				<p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Exercitationem eos ad valorem. Lorem ipsum dolor sit amet consectetur adipiscing elit</p>
+				<p>You can give any format you want to your grids, when using grid areas. It's good for websites with lots of text and information</p>
 				<p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Exercitationem eos ad valorem. Lorem ipsum dolor sit amet consectetur adipiscing elit</p>
 				
 			</div>
