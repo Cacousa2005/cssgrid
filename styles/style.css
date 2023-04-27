@@ -14,7 +14,7 @@
 
 .item{
 	padding: 20px;
-	font-size: 0.77rem;
+	font-size: 1rem;
 	line-height: 1.7;
 }
 
@@ -107,6 +107,7 @@ legend{
 	/* grid-template-columns: 800px; --> This not responsive */
 	grid-template-columns: minmax(auto, 800px); /* this is responsive */
 	justify-content: center;
+	border-radius: 10px;
 	background-color: rgb(255, 200,  150);
 	color: saddlebrown;
 	line-height: 1.7;
@@ -131,7 +132,7 @@ legend{
 	align-self: end ;
 	grid-column: 1;
 	grid-row: 1;
-	color: #fff;
+	color: darkblue;
 	background-color: rgba(0, 0, 0, 0.3); 
 	padding: 20px;
 	font-size: 0.85rem;
@@ -153,7 +154,7 @@ legend{
 
 .header{
 	background-color: rgb(113, 113, 175);
-	color: #fff;
+	color: darkblue;
 	grid-area: header; /* This has to be the name used in the "grid-template-areas". It`s not necessary to be the div name*/
 }
 
@@ -172,7 +173,7 @@ legend{
 
 .footer{
 	grid-area: footer;
-	color: #fff;
+	color: darkblue;
 	padding: 15px;
 	align-self: end;
 }
